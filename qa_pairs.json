@@ -1,0 +1,107 @@
+[
+  {
+    "id": "q01",
+    "question": "Who proposed the concept of quantum computing and in what year?",
+    "expected_answer": "Richard Feynman proposed the concept of quantum computing in 1981 during his lecture at the First Conference on the Physics of Computation at MIT, where he argued that classical computers could not efficiently simulate quantum mechanical systems.",
+    "source_doc": "doc1_quantum_origins",
+    "key_facts": ["Feynman", "1981", "MIT", "simulate quantum systems"]
+  },
+  {
+    "id": "q02",
+    "question": "What is Shor's algorithm and why is it significant for cryptography?",
+    "expected_answer": "Shor's algorithm, developed by Peter Shor at Bell Labs in 1994, can factor large integers in polynomial time O(n^3) using quantum Fourier transform and period-finding. This is significant because RSA encryption relies on the computational difficulty of factoring large numbers, so Shor's algorithm directly threatens public-key cryptography.",
+    "source_doc": "doc1_quantum_origins",
+    "key_facts": ["Shor", "1994", "Bell Labs", "polynomial time", "O(n^3)", "RSA", "factoring"]
+  },
+  {
+    "id": "q03",
+    "question": "What is Grover's algorithm and what speedup does it provide?",
+    "expected_answer": "Grover's algorithm, developed by Lov Grover at Bell Labs in 1996, solves the problem of unstructured database search. It achieves O(√N) queries compared to the classical O(N) queries, providing a quadratic speedup using amplitude amplification.",
+    "source_doc": "doc2_quantum_algorithms",
+    "key_facts": ["Grover", "1996", "O(√N)", "quadratic", "amplitude amplification", "unstructured search"]
+  },
+  {
+    "id": "q04",
+    "question": "What is the surface code and why is it important for fault-tolerant quantum computing?",
+    "expected_answer": "The surface code is a topological quantum error-correcting code introduced by Alexei Kitaev (as the toric code in 1997) and developed into planar form by Fowler and Martinis. It is important because it has a high error threshold of around 1%, is compatible with nearest-neighbor qubit architectures in 2D grids, and uses local stabilizer measurements for syndrome detection.",
+    "source_doc": "doc4_error_correction",
+    "key_facts": ["surface code", "Kitaev", "1997", "1% threshold", "2D grid", "stabilizer", "fault-tolerant"]
+  },
+  {
+    "id": "q05",
+    "question": "What was the BB84 protocol and who invented it?",
+    "expected_answer": "BB84 is the first quantum key distribution protocol, published by Charles Bennett and Gilles Brassard in 1984. It uses photon polarizations in two randomly chosen bases (rectilinear and diagonal) to transmit secret keys, with security guaranteed by quantum mechanics since any eavesdropper disturbs the photons and introduces detectable errors.",
+    "source_doc": "doc5_quantum_cryptography",
+    "key_facts": ["BB84", "Bennett", "Brassard", "1984", "photon polarization", "two bases", "eavesdropper"]
+  },
+  {
+    "id": "q06",
+    "question": "What is quantum supremacy and what did Google claim about it with Sycamore?",
+    "expected_answer": "Quantum supremacy refers to a quantum computer performing a task faster than any classical computer. Google claimed quantum supremacy in 2019 with their 53-qubit Sycamore processor, which completed a random circuit sampling task in 200 seconds that Google estimated would take a classical supercomputer 10,000 years. IBM disputed this claim.",
+    "source_doc": "doc6_quantum_industry",
+    "key_facts": ["Sycamore", "2019", "53 qubits", "200 seconds", "random circuit sampling", "10000 years", "IBM disputed"]
+  },
+  {
+    "id": "q07",
+    "question": "What four post-quantum cryptography algorithms did NIST standardize in 2022?",
+    "expected_answer": "NIST announced four post-quantum cryptography winners in 2022: CRYSTALS-Kyber (key encapsulation, lattice-based), CRYSTALS-Dilithium (digital signatures, lattice-based), FALCON (digital signatures, NTRU lattices), and SPHINCS+ (stateless hash-based digital signatures).",
+    "source_doc": "doc5_quantum_cryptography",
+    "key_facts": ["CRYSTALS-Kyber", "CRYSTALS-Dilithium", "FALCON", "SPHINCS+", "NIST", "2022", "lattice"]
+  },
+  {
+    "id": "q08",
+    "question": "What is the no-cloning theorem and how does it relate to quantum error correction?",
+    "expected_answer": "The no-cloning theorem, proven by Wootters and Zurek in 1982, states that it is impossible to copy an unknown quantum state. This makes classical error correction (which relies on data replication) impossible for quantum information. Quantum error correction instead uses syndrome measurements to detect errors without directly measuring the logical qubit, preserving quantum superposition.",
+    "source_doc": "doc4_error_correction",
+    "key_facts": ["no-cloning theorem", "Wootters", "Zurek", "1982", "syndrome measurement", "logical qubit"]
+  },
+  {
+    "id": "q09",
+    "question": "What is the difference between superconducting qubits and ion trap qubits in terms of gate speed and coherence time?",
+    "expected_answer": "Superconducting qubits have fast gate speeds of nanoseconds (10–50 ns) but short coherence times of around 50–100 microseconds. Ion trap qubits have slower gate speeds measured in microseconds but much longer coherence times exceeding one second and higher gate fidelities above 99.9%.",
+    "source_doc": "doc3_physical_implementations",
+    "key_facts": ["superconducting", "nanoseconds", "50-100 microseconds", "ion trap", "microseconds", "one second", "99.9%"]
+  },
+  {
+    "id": "q10",
+    "question": "What is the VQE algorithm and what is it used for?",
+    "expected_answer": "The Variational Quantum Eigensolver (VQE), proposed by Peruzzo et al. in 2014, is a hybrid quantum-classical algorithm for computing molecular ground state energies. A quantum processor prepares a trial wavefunction and measures energy expectation values, while a classical optimizer adjusts the quantum circuit parameters to minimize the energy.",
+    "source_doc": "doc7_applications",
+    "key_facts": ["VQE", "Variational Quantum Eigensolver", "Peruzzo", "2014", "hybrid", "molecular energy", "classical optimizer"]
+  },
+  {
+    "id": "q11",
+    "question": "What is the NISQ era and who coined the term?",
+    "expected_answer": "NISQ stands for Noisy Intermediate-Scale Quantum and refers to the current era of quantum hardware featuring 50–1,000 qubits with error rates too high for full fault tolerance. The term was coined by John Preskill in 2018.",
+    "source_doc": "doc4_error_correction",
+    "key_facts": ["NISQ", "Noisy Intermediate-Scale Quantum", "Preskill", "2018", "50-1000 qubits", "error rates"]
+  },
+  {
+    "id": "q12",
+    "question": "What physical system did the first experimental quantum computer use and what was demonstrated on it?",
+    "expected_answer": "The first experimental quantum computers used nuclear magnetic resonance (NMR), where nuclear spin states of molecules in liquid solution serve as qubits. In 1998, MIT and Los Alamos demonstrated a 2-qubit NMR quantum computer running Grover's algorithm. In 2001, IBM factored the number 15 using Shor's algorithm on a 7-qubit NMR system.",
+    "source_doc": "doc3_physical_implementations",
+    "key_facts": ["NMR", "nuclear magnetic resonance", "1998", "MIT", "2-qubit", "2001", "IBM", "15", "7-qubit"]
+  },
+  {
+    "id": "q13",
+    "question": "What is the threshold theorem in quantum error correction?",
+    "expected_answer": "The threshold theorem states that if the error rate per physical gate is below a threshold value (roughly 0.1% to 1% depending on the code and error model), then arbitrarily long fault-tolerant quantum computation is achievable using polynomial overhead in physical qubits. Multiple groups proved versions of this theorem between 1996 and 1999.",
+    "source_doc": "doc4_error_correction",
+    "key_facts": ["threshold theorem", "error rate", "0.1% to 1%", "fault-tolerant", "polynomial overhead", "1996-1999"]
+  },
+  {
+    "id": "q14",
+    "question": "What is the harvest now decrypt later threat in quantum cryptography?",
+    "expected_answer": "The harvest now decrypt later threat refers to adversaries recording encrypted communications today and storing them, planning to decrypt them in the future when sufficiently powerful quantum computers running Shor's algorithm become available. This makes the threat of cryptographically relevant quantum computers immediate even if the machines themselves are years away.",
+    "source_doc": "doc7_applications",
+    "key_facts": ["harvest now decrypt later", "adversaries", "record encrypted", "decrypt later", "Shor's algorithm", "immediate threat"]
+  },
+  {
+    "id": "q15",
+    "question": "What was David Deutsch's contribution to quantum computing in 1985?",
+    "expected_answer": "In 1985, David Deutsch at the University of Oxford published a foundational paper formalizing the quantum Turing machine model. He proved that a universal quantum computer could simulate any quantum system in polynomial time and introduced the concept of quantum parallelism, showing that n qubits can process 2^n states simultaneously.",
+    "source_doc": "doc1_quantum_origins",
+    "key_facts": ["Deutsch", "1985", "Oxford", "quantum Turing machine", "polynomial time", "quantum parallelism", "2^n states"]
+  }
+]

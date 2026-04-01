@@ -1,0 +1,20 @@
+Title: Quantum Algorithms — From Grover to Variational Methods (1994–2010)
+
+Following Shor's 1994 breakthrough, the race to discover practical quantum algorithms intensified. The second major quantum algorithm of the era came from Lov Grover at Bell Labs in 1996. Grover's algorithm addressed the problem of unstructured database search: given an unsorted list of N items, how quickly can you find a target? Classically, this requires O(N) queries on average. Grover's algorithm achieves this in O(√N) queries by using amplitude amplification—a technique that iteratively increases the probability amplitude of the correct answer while suppressing others.
+
+While Grover's speedup is quadratic rather than exponential, it has broad applicability. Any problem that can be cast as a search (satisfiability, optimization, cryptographic key search) benefits from this speedup. The National Institute of Standards and Technology (NIST) responded to Grover's result by recommending that symmetric-key lengths be doubled to maintain post-quantum security (e.g., AES-256 instead of AES-128).
+
+In 1999, the quantum approximate optimization algorithm (QAOA) precursor ideas began emerging from work by researchers studying adiabatic quantum computation. Edward Farhi and colleagues at MIT formalized the adiabatic model in 2000, showing that a quantum system could solve optimization problems by slowly evolving a Hamiltonian from a simple initial state to one whose ground state encodes the solution. The adiabatic theorem guaranteed correctness if the evolution was slow enough relative to the spectral gap.
+
+The Quantum Phase Estimation algorithm, a subroutine used inside Shor's algorithm, was generalized and became a core primitive. It allows a quantum computer to estimate eigenvalues of a unitary operator exponentially faster than classical methods. This found application in quantum chemistry: the task of computing molecular ground state energies, which is #P-hard classically, could be attacked with quantum phase estimation.
+
+By 2005, researchers recognized a major practical obstacle: decoherence. Real qubits interact with their environment, causing quantum states to collapse. The threshold theorem for quantum error correction, proven by multiple groups between 1996 and 1999, showed that if per-gate error rates fall below a threshold (roughly 1%), fault-tolerant quantum computation is achievable using concatenated error-correcting codes. The surface code, introduced by Alexei Kitaev in 1997, emerged as a leading error correction scheme because of its high threshold (~1%) and compatibility with nearest-neighbor qubit architectures.
+
+Notable Quantum Algorithms by 2010:
+- Shor's Algorithm (1994): Factoring in polynomial time, O(n^3)
+- Grover's Algorithm (1996): Unstructured search in O(√N) queries
+- HHL Algorithm (2009): Linear systems of equations with exponential speedup
+- Quantum Phase Estimation: Eigenvalue estimation, core subroutine
+- Adiabatic Quantum Optimization (2000): Optimization via ground state evolution
+
+The HHL algorithm, published by Aram Harrow, Avinatan Hassidim, and Seth Lloyd in 2009, provided exponential speedup for solving linear systems Ax = b, given certain conditions on sparsity and condition number. This had direct applications in machine learning (solving normal equations for linear regression) and computational fluid dynamics. However, subsequent research showed that extracting all outputs from HHL required exponential time, limiting practical speedup to applications where only a few properties of x are needed.

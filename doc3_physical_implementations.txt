@@ -1,0 +1,29 @@
+Title: Physical Implementations of Quantum Computers (1995–2020)
+
+Building a quantum computer requires physical systems that can maintain superposition and entanglement long enough to perform computation. The first experimental demonstrations used nuclear magnetic resonance (NMR), where nuclear spin states of molecules in liquid solution served as qubits. In 1998, a team at MIT and Los Alamos demonstrated a 2-qubit NMR quantum computer running Grover's algorithm. By 2001, IBM's NMR group had factored the number 15 using Shor's algorithm on a 7-qubit system—a landmark though largely symbolic result, since the answer (3 × 5) was already known.
+
+NMR had a fundamental scalability problem: signal-to-noise ratio drops exponentially with qubit count in ensemble systems. The field pivoted to more scalable platforms.
+
+Ion Trap Qubits:
+Individual ions confined by electromagnetic fields were proposed as qubits by Cirac and Zoller in 1995. Ions have excellent coherence times (exceeding one second) and high gate fidelities (>99.9% demonstrated by 2020). IonQ and Honeywell (now Quantinuum) commercialized this technology. The primary challenge is slow gate speeds (microseconds) compared to superconducting qubits (nanoseconds), and difficulty scaling beyond ~50 trapped ions in a single trap.
+
+Superconducting Qubits:
+Josephson junction-based superconducting circuits became the leading platform for scalability. These qubits operate at ~15 millikelvin, near absolute zero, using dilution refrigerators. IBM unveiled its first commercial quantum computer in 2016 (5 qubits) via the IBM Quantum Experience cloud platform. By 2019, Google's 53-qubit Sycamore processor claimed "quantum supremacy"—completing a specific random circuit sampling task in 200 seconds that Google estimated would take a classical supercomputer 10,000 years. IBM subsequently disputed this estimate, suggesting their classical simulation could do it in 2.5 days with sufficient storage.
+
+Coherence times for superconducting qubits are short (50–100 microseconds for the best transmon qubits by 2020), but fast gate speeds (~10–50 nanoseconds) allow many operations within the coherence window. IBM's roadmap projected 1,000+ qubit systems by 2023.
+
+Photonic Qubits:
+Photons are naturally immune to decoherence at room temperature, making them attractive. However, photon-photon interactions required for two-qubit gates are extremely weak. Linear optical quantum computing (LOQC), proposed by Knill, Laflamme, and Milburn in 2001 (the KLM protocol), showed that efficient quantum computation was possible using only linear optics, single photon sources, and detectors with feedforward. PsiQuantum was founded in 2017 with the goal of building a million-qubit photonic quantum computer using silicon photonics fab technology.
+
+Topological Qubits:
+Microsoft pursued a distinct approach based on non-Abelian anyons—exotic quasiparticles called Majorana fermions. Topological qubits theoretically have intrinsic error protection because quantum information is stored non-locally. Microsoft's Station Q research group, founded by mathematician Michael Freedman, worked on this approach. However, experimental progress was slower than other platforms, with a controversial 2021 paper retracted due to data presentation issues.
+
+Neutral Atom Qubits:
+Individual atoms held in optical tweezer arrays emerged as a promising platform around 2020. Lukin's group at Harvard demonstrated 256-qubit arrays in 2021. Companies like QuEra and Pasqal commercialized this approach. Neutral atoms offer long coherence times and reconfigurable connectivity, with Rydberg interactions enabling entangling gates.
+
+Comparison of Key Platforms (circa 2020):
+- Superconducting: Fast gates, short coherence, best scaling progress (IBM, Google)
+- Ion Trap: High fidelity, long coherence, slower gates (IonQ, Quantinuum)
+- Photonic: Room temperature operation, weak interactions (PsiQuantum, Xanadu)
+- Neutral Atoms: Long coherence, reconfigurable (QuEra, Pasqal)
+- Topological: Theoretical error protection, very early stage (Microsoft)

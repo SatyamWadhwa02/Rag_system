@@ -1,0 +1,390 @@
+{
+  "aggregate": {
+    "n_samples": 15,
+    "keyword_f1": {
+      "mean": 0.1284,
+      "std": 0.0894,
+      "min": 0.0,
+      "max": 0.306
+    },
+    "cosine_similarity": {
+      "mean": 0.3079,
+      "std": 0.1656
+    },
+    "bleu1": {
+      "mean": 0.1998,
+      "std": 0.0738
+    },
+    "retrieval_accuracy": 0.9333,
+    "composite_score": {
+      "mean": 0.3083,
+      "std": 0.1021
+    },
+    "latency_ms": {
+      "mean": 10.54,
+      "std": 24.5865
+    }
+  },
+  "per_sample": [
+    {
+      "id": "q01",
+      "question": "Who proposed the concept of quantum computing and in what year?",
+      "expected_answer": "Richard Feynman proposed the concept of quantum computing in 1981 during his lecture at the First Conference on the Physics of Computation at MIT, where he argued that classical computers could not efficiently simulate quantum mechanical systems.",
+      "generated_answer": "While not practically useful, it was a proof-of-concept that quantum algorithms could outperform classical ones for structured problems. Title: Practical Applications of Quantum Computing: Near-Term and Long-Term Prospects The practical impact of quantum computing depends critically on distinguishing between what quantum computers can do today (NISQ era), what they could do with moderate fault-tolerance, and what they could achieve with full fault-tolerant machines. Title: The Quantum Computing Industry and Commercial Landscape (2016\u20132024) The commercialization of quantum computing accelerated dramatically after 2016.",
+      "metrics": {
+        "keyword_precision": 0.0233,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "cosine_similarity": 0.2211,
+        "bleu1": 0.1728,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.2398,
+        "latency_ms": 101.1
+      },
+      "retrieved_docs": [
+        "doc1_quantum_origins",
+        "doc7_applications",
+        "doc6_quantum_industry",
+        "doc7_applications",
+        "doc6_quantum_industry"
+      ]
+    },
+    {
+      "id": "q02",
+      "question": "What is Shor's algorithm and why is it significant for cryptography?",
+      "expected_answer": "Shor's algorithm, developed by Peter Shor at Bell Labs in 1994, can factor large integers in polynomial time O(n^3) using quantum Fourier transform and period-finding. This is significant because RSA encryption relies on the computational difficulty of factoring large numbers, so Shor's algorithm directly threatens public-key cryptography.",
+      "generated_answer": "Title: Quantum Cryptography and Post-Quantum Security Quantum mechanics enables both a new threat to cryptography (via Shor's algorithm) and a new form of unconditionally secure communication (quantum key distribution). Timeline of Quantum Cryptography: - 1984: BB84 protocol published (Bennett & Brassard) - 1989: First experimental QKD demonstration (IBM lab, 32 cm) - 1991: E91 entanglement-based protocol (Ekert) - 2016: NIST post-quantum cryptography competition begins - 2017: China launches Micius quantum satellite for QKD - 2020: China's 4,600 km quantum communication network operational - 2022: NIST announces post-quantum cryptography standards - 2024: U.S. The Quantum Phase Estimation algorithm, a subroutine used inside Shor's algorithm, was generalized and became a core primitive.",
+      "metrics": {
+        "keyword_precision": 0.0152,
+        "keyword_recall": 0.1429,
+        "keyword_f1": 0.0274,
+        "cosine_similarity": 0.1724,
+        "bleu1": 0.0938,
+        "retrieval_hit": false,
+        "retrieval_rank": null,
+        "composite_score": 0.0728,
+        "latency_ms": 2.8
+      },
+      "retrieved_docs": [
+        "doc5_quantum_cryptography",
+        "doc5_quantum_cryptography",
+        "doc2_quantum_algorithms",
+        "doc2_quantum_algorithms",
+        "doc7_applications"
+      ]
+    },
+    {
+      "id": "q03",
+      "question": "What is Grover's algorithm and what speedup does it provide?",
+      "expected_answer": "Grover's algorithm, developed by Lov Grover at Bell Labs in 1996, solves the problem of unstructured database search. It achieves O(\u221aN) queries compared to the classical O(N) queries, providing a quadratic speedup using amplitude amplification.",
+      "generated_answer": "While Grover's speedup is quadratic rather than exponential, it has broad applicability. Notable Quantum Algorithms by 2010: - Shor's Algorithm (1994): Factoring in polynomial time, O(n^3) - Grover's Algorithm (1996): Unstructured search in O(\u221aN) queries - HHL Algorithm (2009): Linear systems of equations with exponential speedup - Quantum Phase Estimation: Eigenvalue estimation, core subroutine - Adiabatic Quantum Optimization (2000): Optimization via ground state evolution The HHL algorithm, published by Aram Harrow, Avinatan Hassidim, and Seth Lloyd in 2009, provided exponential speedup for solving linear systems Ax = b, given certain conditions on sparsity and condition number. The QAOA (Quantum Approximate Optimization Algorithm), introduced by Farhi, Goldstone and Gutmann in 2014, targets combinatorial optimization problems like MaxCut and graph coloring.",
+      "metrics": {
+        "keyword_precision": 0.0725,
+        "keyword_recall": 0.8333,
+        "keyword_f1": 0.1333,
+        "cosine_similarity": 0.1703,
+        "bleu1": 0.1364,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.2732,
+        "latency_ms": 2.7
+      },
+      "retrieved_docs": [
+        "doc2_quantum_algorithms",
+        "doc2_quantum_algorithms",
+        "doc7_applications",
+        "doc1_quantum_origins",
+        "doc7_applications"
+      ]
+    },
+    {
+      "id": "q04",
+      "question": "What is the surface code and why is it important for fault-tolerant quantum computing?",
+      "expected_answer": "The surface code is a topological quantum error-correcting code introduced by Alexei Kitaev (as the toric code in 1997) and developed into planar form by Fowler and Martinis. It is important because it has a high error threshold of around 1%, is compatible with nearest-neighbor qubit architectures in 2D grids, and uses local stabilizer measurements for syndrome detection.",
+      "generated_answer": "The surface code, with its high threshold, became the dominant candidate for fault-tolerant quantum computation. In 2024, Microsoft's Azure Quantum announced 8 topological qubits in their Majorana 1 chip, claiming a path to fault-tolerant computation with lower physical qubit overhead than surface codes. Title: Practical Applications of Quantum Computing: Near-Term and Long-Term Prospects The practical impact of quantum computing depends critically on distinguishing between what quantum computers can do today (NISQ era), what they could do with moderate fault-tolerance, and what they could achieve with full fault-tolerant machines.",
+      "metrics": {
+        "keyword_precision": 0.0851,
+        "keyword_recall": 0.4286,
+        "keyword_f1": 0.142,
+        "cosine_similarity": 0.1399,
+        "bleu1": 0.1882,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.2794,
+        "latency_ms": 3.1
+      },
+      "retrieved_docs": [
+        "doc4_error_correction",
+        "doc6_quantum_industry",
+        "doc7_applications",
+        "doc7_applications",
+        "doc6_quantum_industry"
+      ]
+    },
+    {
+      "id": "q05",
+      "question": "What was the BB84 protocol and who invented it?",
+      "expected_answer": "BB84 is the first quantum key distribution protocol, published by Charles Bennett and Gilles Brassard in 1984. It uses photon polarizations in two randomly chosen bases (rectilinear and diagonal) to transmit secret keys, with security guaranteed by quantum mechanics since any eavesdropper disturbs the photons and introduces detectable errors.",
+      "generated_answer": "Quantum Key Distribution (QKD): Charles Bennett and Gilles Brassard published the BB84 protocol in 1984\u2014the first quantum key distribution protocol, named for its authors and publication year. Timeline of Quantum Cryptography: - 1984: BB84 protocol published (Bennett & Brassard) - 1989: First experimental QKD demonstration (IBM lab, 32 cm) - 1991: E91 entanglement-based protocol (Ekert) - 2016: NIST post-quantum cryptography competition begins - 2017: China launches Micius quantum satellite for QKD - 2020: China's 4,600 km quantum communication network operational - 2022: NIST announces post-quantum cryptography standards - 2024: U.S. Linear optical quantum computing (LOQC), proposed by Knill, Laflamme, and Milburn in 2001 (the KLM protocol), showed that efficient quantum computation was possible using only linear optics, single photon sources, and detectors with feedforward.",
+      "metrics": {
+        "keyword_precision": 0.0694,
+        "keyword_recall": 0.6429,
+        "keyword_f1": 0.1253,
+        "cosine_similarity": 0.2941,
+        "bleu1": 0.2,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.3136,
+        "latency_ms": 2.6
+      },
+      "retrieved_docs": [
+        "doc5_quantum_cryptography",
+        "doc5_quantum_cryptography",
+        "doc3_physical_implementations",
+        "doc3_physical_implementations",
+        "doc1_quantum_origins"
+      ]
+    },
+    {
+      "id": "q06",
+      "question": "What is quantum supremacy and what did Google claim about it with Sycamore?",
+      "expected_answer": "Quantum supremacy refers to a quantum computer performing a task faster than any classical computer. Google claimed quantum supremacy in 2019 with their 53-qubit Sycamore processor, which completed a random circuit sampling task in 200 seconds that Google estimated would take a classical supercomputer 10,000 years. IBM disputed this claim.",
+      "generated_answer": "Google Quantum AI: Google's quantum supremacy claim with the 53-qubit Sycamore chip in 2019 was a landmark\u2014and controversy. By 2019, Google's 53-qubit Sycamore processor claimed \"quantum supremacy\"\u2014completing a specific random circuit sampling task in 200 seconds that Google estimated would take a classical supercomputer 10,000 years. Title: Practical Applications of Quantum Computing: Near-Term and Long-Term Prospects The practical impact of quantum computing depends critically on distinguishing between what quantum computers can do today (NISQ era), what they could do with moderate fault-tolerance, and what they could achieve with full fault-tolerant machines.",
+      "metrics": {
+        "keyword_precision": 0.1569,
+        "keyword_recall": 0.6429,
+        "keyword_f1": 0.2522,
+        "cosine_similarity": 0.5466,
+        "bleu1": 0.3407,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.4557,
+        "latency_ms": 2.8
+      },
+      "retrieved_docs": [
+        "doc6_quantum_industry",
+        "doc3_physical_implementations",
+        "doc7_applications",
+        "doc7_applications",
+        "doc1_quantum_origins"
+      ]
+    },
+    {
+      "id": "q07",
+      "question": "What four post-quantum cryptography algorithms did NIST standardize in 2022?",
+      "expected_answer": "NIST announced four post-quantum cryptography winners in 2022: CRYSTALS-Kyber (key encapsulation, lattice-based), CRYSTALS-Dilithium (digital signatures, lattice-based), FALCON (digital signatures, NTRU lattices), and SPHINCS+ (stateless hash-based digital signatures).",
+      "generated_answer": "Timeline of Quantum Cryptography: - 1984: BB84 protocol published (Bennett & Brassard) - 1989: First experimental QKD demonstration (IBM lab, 32 cm) - 1991: E91 entanglement-based protocol (Ekert) - 2016: NIST post-quantum cryptography competition begins - 2017: China launches Micius quantum satellite for QKD - 2020: China's 4,600 km quantum communication network operational - 2022: NIST announces post-quantum cryptography standards - 2024: U.S. NIST ran a multi-year competition starting in 2016 to standardize post-quantum algorithms. The National Institute of Standards and Technology (NIST) responded to Grover's result by recommending that symmetric-key lengths be doubled to maintain post-quantum security (e.g., AES-256 instead of AES-128).",
+      "metrics": {
+        "keyword_precision": 0.0323,
+        "keyword_recall": 0.2857,
+        "keyword_f1": 0.058,
+        "cosine_similarity": 0.0973,
+        "bleu1": 0.0659,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.2107,
+        "latency_ms": 2.8
+      },
+      "retrieved_docs": [
+        "doc5_quantum_cryptography",
+        "doc5_quantum_cryptography",
+        "doc2_quantum_algorithms",
+        "doc7_applications",
+        "doc1_quantum_origins"
+      ]
+    },
+    {
+      "id": "q08",
+      "question": "What is the no-cloning theorem and how does it relate to quantum error correction?",
+      "expected_answer": "The no-cloning theorem, proven by Wootters and Zurek in 1982, states that it is impossible to copy an unknown quantum state. This makes classical error correction (which relies on data replication) impossible for quantum information. Quantum error correction instead uses syndrome measurements to detect errors without directly measuring the logical qubit, preserving quantum superposition.",
+      "generated_answer": "Title: Quantum Error Correction and Fault Tolerance Classical computers use redundancy for error correction: replicate data across multiple bits and use majority voting. The threshold theorem for quantum error correction, proven by multiple groups between 1996 and 1999, showed that if per-gate error rates fall below a threshold (roughly 1%), fault-tolerant quantum computation is achievable using concatenated error-correcting codes. Logical Qubit Demonstrations: - 2022: Google demonstrated below-threshold operation of a surface code, showing that adding more qubits reduced logical error rate (a key threshold theorem prediction) - 2023: IBM achieved 1,121 physical qubits with the Condor processor - 2023: Harvard/QuEra demonstrated 48 logical qubits with error correction using neutral atoms in a paper in Nature - 2024: Microsoft announced creation of topological qubits with Majorana-based devices on their Azure Quantum platform Magic State Distillation: A complication of transversal codes is that the set of transversal gates is not universal.",
+      "metrics": {
+        "keyword_precision": 0.0349,
+        "keyword_recall": 0.25,
+        "keyword_f1": 0.0612,
+        "cosine_similarity": 0.282,
+        "bleu1": 0.1714,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.2793,
+        "latency_ms": 2.8
+      },
+      "retrieved_docs": [
+        "doc4_error_correction",
+        "doc2_quantum_algorithms",
+        "doc4_error_correction",
+        "doc6_quantum_industry",
+        "doc2_quantum_algorithms"
+      ]
+    },
+    {
+      "id": "q09",
+      "question": "What is the difference between superconducting qubits and ion trap qubits in terms of gate speed and coherence time?",
+      "expected_answer": "Superconducting qubits have fast gate speeds of nanoseconds (10\u201350 ns) but short coherence times of around 50\u2013100 microseconds. Ion trap qubits have slower gate speeds measured in microseconds but much longer coherence times exceeding one second and higher gate fidelities above 99.9%.",
+      "generated_answer": "The primary challenge is slow gate speeds (microseconds) compared to superconducting qubits (nanoseconds), and difficulty scaling beyond ~50 trapped ions in a single trap. Comparison of Key Platforms (circa 2020): - Superconducting: Fast gates, short coherence, best scaling progress (IBM, Google) - Ion Trap: High fidelity, long coherence, slower gates (IonQ, Quantinuum) - Photonic: Room temperature operation, weak interactions (PsiQuantum, Xanadu) - Neutral Atoms: Long coherence, reconfigurable (QuEra, Pasqal) - Topological: Theoretical error protection, very early stage (Microsoft) To implement a universal gate set fault-tolerantly, a technique called magic state distillation is used: noisy \"magic states\" are purified using multiple rounds of a distillation circuit until the error rate is low enough for use.",
+      "metrics": {
+        "keyword_precision": 0.0617,
+        "keyword_recall": 0.6429,
+        "keyword_f1": 0.1126,
+        "cosine_similarity": 0.2425,
+        "bleu1": 0.181,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.2919,
+        "latency_ms": 3.3
+      },
+      "retrieved_docs": [
+        "doc3_physical_implementations",
+        "doc3_physical_implementations",
+        "doc4_error_correction",
+        "doc6_quantum_industry",
+        "doc4_error_correction"
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "What is the VQE algorithm and what is it used for?",
+      "expected_answer": "The Variational Quantum Eigensolver (VQE), proposed by Peruzzo et al. in 2014, is a hybrid quantum-classical algorithm for computing molecular ground state energies. A quantum processor prepares a trial wavefunction and measures energy expectation values, while a classical optimizer adjusts the quantum circuit parameters to minimize the energy.",
+      "generated_answer": "The Quantum Phase Estimation algorithm, a subroutine used inside Shor's algorithm, was generalized and became a core primitive. in 2014, is a hybrid algorithm where a quantum processor prepares a trial wavefunction ansatz and measures energy expectation values, while a classical optimizer adjusts parameters. Notable Quantum Algorithms by 2010: - Shor's Algorithm (1994): Factoring in polynomial time, O(n^3) - Grover's Algorithm (1996): Unstructured search in O(\u221aN) queries - HHL Algorithm (2009): Linear systems of equations with exponential speedup - Quantum Phase Estimation: Eigenvalue estimation, core subroutine - Adiabatic Quantum Optimization (2000): Optimization via ground state evolution The HHL algorithm, published by Aram Harrow, Avinatan Hassidim, and Seth Lloyd in 2009, provided exponential speedup for solving linear systems Ax = b, given certain conditions on sparsity and condition number.",
+      "metrics": {
+        "keyword_precision": 0.0845,
+        "keyword_recall": 0.5,
+        "keyword_f1": 0.1446,
+        "cosine_similarity": 0.3234,
+        "bleu1": 0.2478,
+        "retrieval_hit": true,
+        "retrieval_rank": 2,
+        "composite_score": 0.3382,
+        "latency_ms": 2.9
+      },
+      "retrieved_docs": [
+        "doc2_quantum_algorithms",
+        "doc7_applications",
+        "doc2_quantum_algorithms",
+        "doc4_error_correction",
+        "doc5_quantum_cryptography"
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "What is the NISQ era and who coined the term?",
+      "expected_answer": "NISQ stands for Noisy Intermediate-Scale Quantum and refers to the current era of quantum hardware featuring 50\u20131,000 qubits with error rates too high for full fault tolerance. The term was coined by John Preskill in 2018.",
+      "generated_answer": "NISQ Era: John Preskill coined the term \"Noisy Intermediate-Scale Quantum\" (NISQ) in 2018 to describe current quantum hardware: 50\u20131,000 qubits with error rates too high for full fault tolerance but potentially capable of outperforming classical computers on specific tasks. NISQ Era: John Preskill coined the term \"Noisy Intermediate-Scale Quantum\" (NISQ) in 2018 to describe current quantum hardware: 50\u20131,000 qubits with error rates too high for full fault tolerance but potentially capable of outperforming classical computers on Title: Practical Applications of Quantum Computing: Near-Term and Long-Term Prospects The practical impact of quantum computing depends critically on distinguishing between what quantum computers can do today (NISQ era), what they could do with moderate fault-tolerance, and what they could achieve with full fault-tolerant machines.",
+      "metrics": {
+        "keyword_precision": 0.1837,
+        "keyword_recall": 0.9167,
+        "keyword_f1": 0.306,
+        "cosine_similarity": 0.6619,
+        "bleu1": 0.2602,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.4899,
+        "latency_ms": 2.7
+      },
+      "retrieved_docs": [
+        "doc4_error_correction",
+        "doc4_error_correction",
+        "doc7_applications",
+        "doc7_applications",
+        "doc2_quantum_algorithms"
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "What physical system did the first experimental quantum computer use and what was demonstrated on it?",
+      "expected_answer": "The first experimental quantum computers used nuclear magnetic resonance (NMR), where nuclear spin states of molecules in liquid solution serve as qubits. In 1998, MIT and Los Alamos demonstrated a 2-qubit NMR quantum computer running Grover's algorithm. In 2001, IBM factored the number 15 using Shor's algorithm on a 7-qubit NMR system.",
+      "generated_answer": "In 1985, Deutsch published a foundational paper titled \"Quantum Theory, the Church-Turing Principle and the Universal Quantum Computer.\" This paper introduced the concept of a universal quantum computer and formally defined quantum parallelism \u2014 the idea that a quantum system can exist in a superposition of states and process multiple computational paths simultaneously. Title: Physical Implementations of Quantum Computers (1995\u20132020) Building a quantum computer requires physical systems that can maintain superposition and entanglement long enough to perform computation. The theorem states: if the error rate per physical gate is below a threshold value p_th, then arbitrarily long fault-tolerant quantum computation is possible using polynomial overhead.",
+      "metrics": {
+        "keyword_precision": 0.0,
+        "keyword_recall": 0.0,
+        "keyword_f1": 0.0,
+        "cosine_similarity": 0.1625,
+        "bleu1": 0.1327,
+        "retrieval_hit": true,
+        "retrieval_rank": 2,
+        "composite_score": 0.2172,
+        "latency_ms": 2.8
+      },
+      "retrieved_docs": [
+        "doc1_quantum_origins",
+        "doc3_physical_implementations",
+        "doc4_error_correction",
+        "doc4_error_correction",
+        "doc6_quantum_industry"
+      ]
+    },
+    {
+      "id": "q13",
+      "question": "What is the threshold theorem in quantum error correction?",
+      "expected_answer": "The threshold theorem states that if the error rate per physical gate is below a threshold value (roughly 0.1% to 1% depending on the code and error model), then arbitrarily long fault-tolerant quantum computation is achievable using polynomial overhead in physical qubits. Multiple groups proved versions of this theorem between 1996 and 1999.",
+      "generated_answer": "The theorem states: if the error rate per physical gate is below a threshold value p_th, then arbitrarily long fault-tolerant quantum computation is possible using polynomial overhead. The threshold theorem for quantum error correction, proven by multiple groups between 1996 and 1999, showed that if per-gate error rates fall below a threshold (roughly 1%), fault-tolerant quantum computation is achievable using concatenated error-correcting codes. Logical Qubit Demonstrations: - 2022: Google demonstrated below-threshold operation of a surface code, showing that adding more qubits reduced logical error rate (a key threshold theorem prediction) - 2023: IBM achieved 1,121 physical qubits with the Condor processor - 2023: Harvard/QuEra demonstrated 48 logical qubits with error correction using neutral atoms in a paper in Nature - 2024: Microsoft announced creation of topological qubits with Majorana-based devices on their Azure Quantum platform Magic State Distillation: A complication of transversal codes is that the set of transversal gates is not universal.",
+      "metrics": {
+        "keyword_precision": 0.0854,
+        "keyword_recall": 0.6667,
+        "keyword_f1": 0.1514,
+        "cosine_similarity": 0.5487,
+        "bleu1": 0.3028,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.4083,
+        "latency_ms": 2.8
+      },
+      "retrieved_docs": [
+        "doc4_error_correction",
+        "doc2_quantum_algorithms",
+        "doc4_error_correction",
+        "doc2_quantum_algorithms",
+        "doc6_quantum_industry"
+      ]
+    },
+    {
+      "id": "q14",
+      "question": "What is the harvest now decrypt later threat in quantum cryptography?",
+      "expected_answer": "The harvest now decrypt later threat refers to adversaries recording encrypted communications today and storing them, planning to decrypt them in the future when sufficiently powerful quantum computers running Shor's algorithm become available. This makes the threat of cryptographically relevant quantum computers immediate even if the machines themselves are years away.",
+      "generated_answer": "The \"harvest now, decrypt later\" threat is immediate: adversaries can record encrypted communications today and decrypt them when quantum computers become available. Title: Quantum Cryptography and Post-Quantum Security Quantum mechanics enables both a new threat to cryptography (via Shor's algorithm) and a new form of unconditionally secure communication (quantum key distribution). Timeline of Quantum Cryptography: - 1984: BB84 protocol published (Bennett & Brassard) - 1989: First experimental QKD demonstration (IBM lab, 32 cm) - 1991: E91 entanglement-based protocol (Ekert) - 2016: NIST post-quantum cryptography competition begins - 2017: China launches Micius quantum satellite for QKD - 2020: China's 4,600 km quantum communication network operational - 2022: NIST announces post-quantum cryptography standards - 2024: U.S.",
+      "metrics": {
+        "keyword_precision": 0.1528,
+        "keyword_recall": 1.0,
+        "keyword_f1": 0.2651,
+        "cosine_similarity": 0.2856,
+        "bleu1": 0.2451,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.3765,
+        "latency_ms": 2.7
+      },
+      "retrieved_docs": [
+        "doc7_applications",
+        "doc5_quantum_cryptography",
+        "doc5_quantum_cryptography",
+        "doc7_applications",
+        "doc6_quantum_industry"
+      ]
+    },
+    {
+      "id": "q15",
+      "question": "What was David Deutsch's contribution to quantum computing in 1985?",
+      "expected_answer": "In 1985, David Deutsch at the University of Oxford published a foundational paper formalizing the quantum Turing machine model. He proved that a universal quantum computer could simulate any quantum system in polynomial time and introduced the concept of quantum parallelism, showing that n qubits can process 2^n states simultaneously.",
+      "generated_answer": "In 1985, Deutsch published a foundational paper titled \"Quantum Theory, the Church-Turing Principle and the Universal Quantum Computer.\" This paper introduced the concept of a universal quantum computer and formally defined quantum parallelism \u2014 the idea that a quantum system can exist in a superposition of states and process multiple computational paths simultaneously. Title: The Quantum Computing Industry and Commercial Landscape (2016\u20132024) The commercialization of quantum computing accelerated dramatically after 2016. Title: Practical Applications of Quantum Computing: Near-Term and Long-Term Prospects The practical impact of quantum computing depends critically on distinguishing between what quantum computers can do today (NISQ era), what they could do with moderate fault-tolerance, and what they could achieve with full fault-tolerant machines.",
+      "metrics": {
+        "keyword_precision": 0.0847,
+        "keyword_recall": 0.5714,
+        "keyword_f1": 0.1476,
+        "cosine_similarity": 0.4705,
+        "bleu1": 0.2589,
+        "retrieval_hit": true,
+        "retrieval_rank": 1,
+        "composite_score": 0.3784,
+        "latency_ms": 20.2
+      },
+      "retrieved_docs": [
+        "doc1_quantum_origins",
+        "doc6_quantum_industry",
+        "doc7_applications",
+        "doc6_quantum_industry",
+        "doc7_applications"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+Title: Quantum Error Correction and Fault Tolerance
+
+Classical computers use redundancy for error correction: replicate data across multiple bits and use majority voting. Quantum mechanics forbids direct copying of unknown quantum states (the no-cloning theorem, proven by Wootters and Zurek in 1982). Quantum error correction must therefore protect quantum information without measuring it directly, since measurement collapses quantum states.
+
+Peter Shor solved this in 1995 with the first quantum error-correcting code, the Shor code. It encodes one logical qubit into nine physical qubits and can correct any single-qubit error—bit flip, phase flip, or any combination. The key insight was that you can measure error syndromes (patterns indicating which errors occurred) without measuring the logical qubit itself. Syndrome measurement projects errors onto definite values while preserving quantum superposition of the encoded data.
+
+Andrew Steane independently developed a 7-qubit code in 1996, now called the Steane code. It belongs to the class of CSS codes (Calderbank-Shor-Steane codes) and has the desirable property of transversality: logical gates can be implemented by applying physical gates qubit-by-qubit, preventing error propagation during the gate itself.
+
+The Threshold Theorem:
+Multiple groups (Aharonov & Ben-Or, Knill, Laflamme & Zurek, Kitaev) proved versions of the threshold theorem between 1996–1999. The theorem states: if the error rate per physical gate is below a threshold value p_th, then arbitrarily long fault-tolerant quantum computation is possible using polynomial overhead. Estimates of p_th range from ~0.1% to ~1% depending on the error model and code used. The surface code, with its high threshold, became the dominant candidate for fault-tolerant quantum computation.
+
+The Surface Code:
+Alexei Kitaev introduced the toric code in 1997, a topological error-correcting code. The planar version—the surface code—was developed by Fowler, Martinis and colleagues. In the surface code, qubits are arranged in a 2D grid; logical qubits are encoded in the topology of the grid. Error syndromes are measured by local stabilizer measurements involving nearest-neighbor qubits, making it compatible with the planar layout of superconducting qubit chips. To achieve a logical error rate of 10^-15 from physical qubits with 0.1% error rate requires roughly a 50×50 grid (2,500 physical qubits) per logical qubit. This overhead is the central challenge of the NISQ-to-fault-tolerant transition.
+
+NISQ Era:
+John Preskill coined the term "Noisy Intermediate-Scale Quantum" (NISQ) in 2018 to describe current quantum hardware: 50–1,000 qubits with error rates too high for full fault tolerance but potentially capable of outperforming classical computers on specific tasks. NISQ algorithms like the Variational Quantum Eigensolver (VQE) and QAOA are designed to work within these constraints, using classical optimization loops to tune quantum circuits.
+
+Logical Qubit Demonstrations:
+- 2022: Google demonstrated below-threshold operation of a surface code, showing that adding more qubits reduced logical error rate (a key threshold theorem prediction)
+- 2023: IBM achieved 1,121 physical qubits with the Condor processor
+- 2023: Harvard/QuEra demonstrated 48 logical qubits with error correction using neutral atoms in a paper in Nature
+- 2024: Microsoft announced creation of topological qubits with Majorana-based devices on their Azure Quantum platform
+
+Magic State Distillation:
+A complication of transversal codes is that the set of transversal gates is not universal. To implement a universal gate set fault-tolerantly, a technique called magic state distillation is used: noisy "magic states" are purified using multiple rounds of a distillation circuit until the error rate is low enough for use. This process is resource-intensive, requiring thousands of physical qubits per logical magic state, and represents a large fraction of the overhead in fault-tolerant quantum computation estimates.

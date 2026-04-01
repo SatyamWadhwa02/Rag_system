@@ -1,0 +1,36 @@
+Title: Quantum Cryptography and Post-Quantum Security
+
+Quantum mechanics enables both a new threat to cryptography (via Shor's algorithm) and a new form of unconditionally secure communication (quantum key distribution). These two aspects of quantum cryptography developed in parallel.
+
+Quantum Key Distribution (QKD):
+Charles Bennett and Gilles Brassard published the BB84 protocol in 1984—the first quantum key distribution protocol, named for its authors and publication year. BB84 uses the quantum mechanical properties of photons to transmit a secret key. Alice encodes random bits as photon polarizations in one of two randomly chosen bases (rectilinear: 0°/90°, or diagonal: 45°/135°). Bob measures each photon in a randomly chosen basis. After transmission, Alice and Bob publicly compare bases (not results) and keep only bits where bases matched—roughly half. Any eavesdropper (Eve) who measures photons disturbs them, introducing detectable errors. Security is guaranteed by the laws of physics, not computational hardness.
+
+The first experimental demonstration of QKD was performed in 1989 by Bennett and Brassard at IBM, transmitting over 32 cm of free space. By 2020, China had deployed a satellite-based QKD network spanning 4,600 km, connecting Beijing, Shanghai, and other cities.
+
+E91 Protocol:
+Artur Ekert at Oxford proposed an alternative QKD protocol in 1991 based on quantum entanglement. The E91 protocol uses pairs of entangled photons; security follows from the violation of Bell inequalities, providing a device-independent security guarantee. Experimental loophole-free Bell inequality violations (required to close all potential security loopholes) were first demonstrated by Delft, NIST, and Vienna groups in 2015.
+
+The Threat to Classical Cryptography:
+RSA encryption, widely used for internet security, relies on the computational difficulty of factoring large integers. A sufficiently large quantum computer running Shor's algorithm could break 2048-bit RSA encryption. Estimates suggest this requires approximately 4,000 error-corrected logical qubits, corresponding to roughly 4 million physical qubits with surface code overhead—far beyond current technology. Similarly, elliptic curve cryptography (ECC) used in HTTPS and cryptocurrencies is vulnerable to Shor's algorithm applied to the discrete logarithm problem.
+
+Post-Quantum Cryptography (PQC):
+The response is to develop classical cryptographic algorithms believed to be secure against quantum attacks. NIST ran a multi-year competition starting in 2016 to standardize post-quantum algorithms. In 2022, NIST announced four winners:
+1. CRYSTALS-Kyber: Key encapsulation mechanism based on lattice problems
+2. CRYSTALS-Dilithium: Digital signature scheme based on lattices
+3. FALCON: Digital signature based on NTRU lattices
+4. SPHINCS+: Stateless hash-based digital signature scheme
+
+The lattice-based schemes (Kyber, Dilithium, FALCON) rely on the hardness of the Learning With Errors (LWE) problem and related lattice problems. No quantum algorithm is known to solve these efficiently. SPHINCS+ relies only on hash function security and requires no new mathematical hardness assumptions.
+
+Quantum Random Number Generators (QRNGs):
+A simpler but important quantum technology is the quantum random number generator. Classical pseudo-random number generators are deterministic; true randomness requires physical processes. Quantum measurement outcomes are provably random (not merely unpredictable). Commercial QRNGs are available from companies like ID Quantique, exploiting photon arrival times, vacuum fluctuations, or radioactive decay. These are used in gambling, lotteries, and cryptographic key generation.
+
+Timeline of Quantum Cryptography:
+- 1984: BB84 protocol published (Bennett & Brassard)
+- 1989: First experimental QKD demonstration (IBM lab, 32 cm)
+- 1991: E91 entanglement-based protocol (Ekert)
+- 2016: NIST post-quantum cryptography competition begins
+- 2017: China launches Micius quantum satellite for QKD
+- 2020: China's 4,600 km quantum communication network operational
+- 2022: NIST announces post-quantum cryptography standards
+- 2024: U.S. government mandates transition to PQC algorithms by 2035
